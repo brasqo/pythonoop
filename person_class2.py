@@ -43,15 +43,15 @@ def calculate_age():
 	print(day_entry.get())
 	print(name_entry.get())
 	person1 = Person(str(name_entry.get()), datetime.date(int(year_entry.get()),
-										int(month_entry.get()),
-										int(day_entry.get())))
+								int(month_entry.get()),
+								int(day_entry.get())))
 	print(person1.age())
 	#creates text box within frame
 	text_answer = tk.Text(master=root, height=10, width=30)
 	text_answer.grid(column=1, row=5)
 	#creates an object 'answer_text' and formats it as a sentence.
 	answer_text = "{name} is {age} years old.".format(name=person1.full_name,
-													  age=person1.age())
+							 age=person1.age())
 	#inserts text within the textbox in the frame.
 	#2nd arg is what value you want to display.
 	text_answer.insert(tk.END, answer_text)
